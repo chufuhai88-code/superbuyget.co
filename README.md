@@ -9,11 +9,10 @@ Static companion site for SuperBuy spreadsheet-style browse → paste workflows.
 
 ## Deploy (GitHub Pages)
 
-Pushes to `main` run [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml).
-
-1. Repo **Settings → Pages → Build and deployment**: set **Source** to **GitHub Actions** (first time only, if GitHub prompts you).
-2. After the workflow finishes, Pages URL is **`https://chufuhai88-code.github.io/superbuyget.co/`**  
-3. Links in HTML use absolute paths `/…` aimed at apex **superbuyget.com**. For best behavior on `.github.io`, add **Pages → Custom domain** `superbuyget.com`, then point DNS (A / CNAME) per [GitHub docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
+1. Workflow [`.github/workflows/gh-pages.yml`](.github/workflows/gh-pages.yml) runs on pushes to **`main`** and publishes the workspace to **`gh-pages`**.
+2. In the repo — **Settings → Pages → Build and deployment**: Source = **Deploy from a branch**, Branch = **`gh-pages`** / **`/ (root)`** (set this **after** the first workflow run succeeds, so `gh-pages` exists).
+3. Published URL defaults to **`https://chufuhai88-code.github.io/superbuyget.co/`**  
+4. Canonical links assume apex **superbuyget.com**. For correct `/…` URLs in production, add **Custom domain** `superbuyget.com` under Pages + DNS per [GitHub docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
 
 ## Clone & push
 

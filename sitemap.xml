@@ -13,6 +13,12 @@
     <priority>0.55</priority>
   </url>
   <url>
+    <loc>https://superbuyget.com/workflow.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://superbuyget.com/spreadsheet.html</loc>
     <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>

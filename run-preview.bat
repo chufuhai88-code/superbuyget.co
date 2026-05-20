@@ -1,12 +1,13 @@
 ﻿@echo off
 chcp 65001 >nul
 cd /d "%~dp0"
-title SuperBuyGet local preview :8767
+title SuperBuyGet local preview
 echo.
 echo Serving folder: %cd%
-echo Live domain: https://superbuyget.com/
+echo Open in browser: http://127.0.0.1:8877/
+echo Live site:       https://superbuyget.com/
 echo.
-echo (Uses port 8767 so it won't clash with other local preview servers.)
+echo (Port 8877 — if it fails, edit this file to another free port.)
 echo.
-npx --yes serve . -l tcp://127.0.0.1:8767 --no-port-switching
+python -m http.server 8877 --bind 127.0.0.1
 pause

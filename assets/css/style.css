@@ -155,6 +155,76 @@ main .content-list {
   color: var(--accent);
 }
 
+.guides-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.25rem auto 1.5rem;
+  max-width: 44rem;
+  text-align: left;
+}
+
+.guides-hub-card {
+  display: block;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.18s ease, transform 0.18s ease;
+}
+
+.guides-hub-card:hover {
+  border-color: rgba(167, 139, 250, 0.4);
+  transform: translateY(-2px);
+}
+
+.guides-hub-title {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.4rem;
+  color: var(--accent);
+}
+
+.guides-hub-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.glossary-dl {
+  margin: 0;
+  text-align: left;
+}
+
+.glossary-dl dt {
+  font-weight: 700;
+  color: var(--accent);
+  margin-top: 1.1rem;
+}
+
+.glossary-dl dt:first-child {
+  margin-top: 0;
+}
+
+.glossary-dl dd {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.page-home .home-rep-guides {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.page-home .home-rep-guides .section-intro {
+  margin-bottom: 1rem;
+}
+
 
 
 .guides-policy-note {
@@ -1784,6 +1854,141 @@ a.header-logo:focus-visible {
   max-width: 40rem;
   color: var(--muted);
   line-height: 1.65;
+}
+
+.page-home .catalog-toolbar {
+  max-width: 52rem;
+  margin: 0 auto 1.35rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+  text-align: left;
+}
+
+.page-home .catalog-toolbar-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.75rem 1rem;
+}
+
+.page-home .catalog-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  flex: 1 1 12rem;
+  min-width: 0;
+}
+
+.page-home .catalog-field-select {
+  flex: 0 1 12rem;
+}
+
+.page-home .catalog-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.page-home .catalog-search-input,
+.page-home .catalog-category-select {
+  width: 100%;
+  padding: 0.55rem 0.85rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.page-home .catalog-search-input:focus,
+.page-home .catalog-category-select:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.page-home .catalog-category-select {
+  cursor: pointer;
+}
+
+.page-home button.catalog-reset {
+  flex-shrink: 0;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+@media (max-width: 620px) {
+  .page-home button.catalog-reset {
+    margin-left: 0;
+    align-self: stretch;
+    justify-content: center;
+  }
+
+  .page-home .catalog-field-select {
+    flex: 1 1 100%;
+  }
+}
+
+.page-home .catalog-count {
+  margin: 0.85rem 0 0;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.page-home .catalog-store-bridge {
+  margin: 0.75rem 0 0;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--muted);
+  max-width: 44rem;
+}
+
+.page-home .catalog-store-bridge kbd {
+  display: inline-block;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  font-size: 0.74rem;
+  font-family: var(--font-sans);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.page-home .catalog-store-bridge-cta {
+  margin: 0.45rem 0 0;
+  font-size: 0.95rem;
+}
+
+.page-home .catalog-store-bridge-link {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(167, 139, 250, 0.45);
+}
+
+.page-home .catalog-store-bridge-link:hover,
+.page-home .catalog-store-bridge-link:focus-visible {
+  color: #c4b5fd;
+  border-bottom-color: rgba(167, 139, 250, 0.8);
+}
+
+.page-home .catalog-store-bridge-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.page-home .catalog-empty {
+  margin: 0 auto 1rem;
+  max-width: 40rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius);
+  border: 1px dashed var(--border);
+  color: var(--muted);
 }
 
 .page-home .product-picks-grid {
